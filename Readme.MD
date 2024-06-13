@@ -1,6 +1,4 @@
-## Powershell Script for checking your MS365 Tenant for licensing availability
-
-Win32 App
+## Install Office365 via Win32 App
 
 Name: Microsoft Office 365
 Description: Microsoft Office 365
