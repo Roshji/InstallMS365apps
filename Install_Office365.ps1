@@ -1,5 +1,7 @@
-<# ###################
-Author: M van Rijn - Prodicom
+<#
+###################
+Authors: M van Rijn - Prodicom 
+Remco van Diermen - RvD IT Consulting
 
 # --- UNINSTALL ---
 # Some vendors pre-install [Productname], such as Microsoft Surface devices
@@ -21,7 +23,8 @@ Remove languages specified in Uninstall_[Productname]_Languages.xml, end logging
 - Install [Productname] via Officedeploymenttool and Install_[Productname].xml
 
 The Officedeploymenttool folder will remain on the device for uninstall
-#################### #>
+####################
+#>
 
 # Vars
 $Date = (Get-Date).tostring("yyyy-MM-dd HHmm")
