@@ -1,4 +1,4 @@
-Win32 App
+##Win32 App
 
 Name: Microsoft Office 365 Description: Microsoft Office 365
 Publisher: Microsoft
