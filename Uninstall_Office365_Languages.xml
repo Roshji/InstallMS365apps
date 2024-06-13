@@ -1,0 +1,38 @@
+ <Configuration>
+      <Remove OfficeClientEdition="64" >
+        <Product ID="O365ProPlusRetail">
+<!--      <Language ID="en-us" />
+          <Language ID="nl-nl" /> -->
+          <Language ID="es-es" />
+          <Language ID="pl-pl" />
+          <Language ID="ar-sa" />
+          <Language ID="da-dk" />
+          <Language ID="de-de" />
+          <Language ID="en-gb" />
+          <Language ID="fr-fr" />
+          <Language ID="it-it" />
+          <Language ID="nb-no" />
+          <Language ID="pt-pt" />
+          <Language ID="fi-fi" />
+          <Language ID="sv-se" />
+        </Product>
+        <Product ID="OneNoteFreeRetail">
+          <Language ID="es-es" />
+          <Language ID="pl-pl" />
+          <Language ID="ar-sa" />
+          <Language ID="da-dk" />
+          <Language ID="de-de" />
+          <Language ID="en-gb" />
+          <Language ID="fr-fr" />
+          <Language ID="it-it" />
+          <Language ID="nb-no" />
+          <Language ID="pt-pt" />
+          <Language ID="fi-fi" />
+          <Language ID="sv-se" />
+          <Language ID="nl-nl" />
+          <Language ID="en-us" />
+        </Product>
+      </Remove>  
+      <Updates Enabled="TRUE" />
+      <Display Level="None" AcceptEULA="TRUE" />
+ </Configuration>
