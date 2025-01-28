@@ -35,11 +35,15 @@ $Global:DownloadAppFolder = "C:\ProgramData\Intune\Packages\$($Global:ProductNam
 $LogFile = "C:\Programdata\Microsoft\IntuneManagementExtension\Logs\Logs_$($Global:ProductName)_install_$($Date).log"
 $Global:installFolder = "$PSScriptRoot"
 $Office365Path = "C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeClickToRun.exe"
-$Url = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=49117"
+# Link changed on Dec 6 2024
+$Url = "https://www.microsoft.com/en-us/download/details.aspx?id=49117"
+#$Url = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=49117"
 $Response = Invoke-WebRequest -UseBasicParsing -Uri $url -ErrorAction SilentlyContinue
 $Global:SetupEXEFile = "$Global:DownloadAppFolder\$Global:ExtractAppFolder\Setup.exe"
 $Global:InstallXML = "Install_$Global:ProductName.xml"
 $UnInstallXML = "Uninstall_$($Global:ProductName)_Languages.xml"
+
+
 
 # Start Logging
 Start-Transcript -Path $LogFile
@@ -61,8 +65,10 @@ Function Get-OfficeSource {
     # DOWNLOAD SECTION #
     ####################
     # Get Download URL of latest Office Deployment Tool (ODT)
-    $ODTUri = $response.links | Where-Object {$_.outerHTML -like "*click here to download manually*"}
+  # $ODTUri = $response.links | Where-Object {$_.outerHTML -like "*click here to download manually*"}
+    $ODTUri = $response.Links | Where-Object { $_.href -match "https://download\.microsoft\.com/download/.*/officedeploymenttool_.*\.exe" }
     $UrlCurrentVerODT = $ODTUri.href
+  #  $UrlCurrentVerODT = $ODTUri.href
     # Download latest Office Deployment Tool (ODT)
     Write-Host "Downloading latest version of Office Deployment Tool (ODT)."
     Invoke-WebRequest -UseBasicParsing -Uri $UrlCurrentVerODT -OutFile $Global:DownloadAppFolder\$Global:ODTExe
