@@ -1,6 +1,6 @@
  <Configuration>
       <Remove OfficeClientEdition="64" >
-        <Product ID="O365ProPlusRetail">
+        <Product ID="O365ProPlusEEANoTeamsRetail">
 <!--      <Language ID="en-us" />
           <Language ID="nl-nl" /> -->
           <Language ID="es-es" />
